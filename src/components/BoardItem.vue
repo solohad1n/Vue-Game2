@@ -1,9 +1,9 @@
 <template>
   <div :class="
-  'board-item '
+    'board-item '
     + (selected ? 'selected ' : '')
     + (closed ? ' closed' : '')
-    ">
+  ">
     <i v-if="icon" :class="'icon icon-' + icon"></i>
   </div>
 </template>
@@ -45,7 +45,26 @@ export default {
 .closed {
   background-color: #00ff0022;
 }
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.icon-1,
+.icon-2,
+.icon-3 {
+  background: url('../assets/icons.png');
+  background-size: 150px 150px;
+}
 .icon-1 {
-  background: url('../assets/icons.png') ;
+  background-position: 0 0;
+}
+.icon-2 {
+  background-position: 50px 0;
+}
+.icon-3 {
+  background-position: 100px 0;
 }
 </style>
