@@ -4,7 +4,7 @@
     + (selected ? 'selected ' : '')
     + (closed ? ' closed' : '')
   ">
-    <i v-if="icon" :class="'icon icon-' + icon"></i>
+    <i v-if="iconId" :class="'icon icon-' + iconId"></i>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
   name: 'BoardItem',
   
   props: {
-    icon: {
+    iconId: {
       type: Number,
       required: false,
       default: 0,
